@@ -1,16 +1,12 @@
-import './Card.css';
+/* eslint-disable react/prop-types */
+import "./Card.css";
 
-export default function Card() {
+export default function Card(props) {
   return (
-    <div>
-      <div className="card">
-        <h1>Java</h1>
-        <img
-          src="https://salvatore.academy/devmon/1_java.png"
-          alt="DevMon Java"
-          width="200"
-        />
-      </div>
+    <div className="card">
+      <h2>{props.item.name}</h2>
+      {props.item.evolutionFor && <p>Evolui para: <b>{props.item.evolutionFor}</b></p> }
+      <img src={props.item.image} alt={props.item.alt} width="200" />
     </div>
   );
 }

@@ -4,9 +4,9 @@ import "./Card.css";
 export default function Card(props) {
   return (
     <div className="card">
-      <h2>{props.item.name}</h2>
-      {props.item.evolutionFor && <p>Evolui para: <b>{props.item.evolutionFor}</b></p> }
-      <img src={props.item.image} alt={props.item.alt} width="200" />
+      <h2>{props.item.nome}</h2>
+      {props.item.evoluiPara && <p>Evolui para: <b>{props.item.evoluiPara}</b></p> }
+      <img src={props.item.imagem} width="200" />
     </div>
   );
 }
